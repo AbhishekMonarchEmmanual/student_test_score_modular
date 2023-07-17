@@ -48,6 +48,7 @@ if __name__ == "__main__":
             
 
                 st.text(r2_scores)
+                
         
 
         

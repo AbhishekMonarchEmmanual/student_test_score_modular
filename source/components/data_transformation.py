@@ -12,7 +12,7 @@ from source.config.config import *
 from source.config.atrifact import *
 from source.config import *
 from source.utilities.utilities import *
-
+import dill
 class DataTransformation:
   
     def __init__(self, data_transformation_config:DataTransformationConfig, artifact_file=DataIngestionArtifact):
@@ -67,7 +67,7 @@ class DataTransformation:
             
            
             
-            logging.info(f"_________PREPARING FOR SAVING OBJECT AND PICKLE FILE_____________")
+            logging.info(f"_________PREPARING FOR SAVING OBJECT AND dill FILE_____________")
             
             save_object(
                 file_path= self.data_transformation_config.preprocessor_obj_file_path,

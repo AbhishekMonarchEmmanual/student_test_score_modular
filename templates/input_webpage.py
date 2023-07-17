@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd 
 import os
-
+import csv
 class Prediction_input:
         
     def my_title_page(self):
@@ -36,9 +36,21 @@ class Prediction_input:
             if st.checkbox("wanna see df"):
                 df = pd.DataFrame([data_dict])
                 st.write(df)
-                if st.checkbox("want df to predict value"):
+                if st.checkbox("create_csv_file"):
                     os.makedirs("predict_df" ,exist_ok=True)
-                    df.to_csv("predict_df/df.csv", index= False)
+                    
+                    with open("templates/predict_df/df.csv", mode="w", newline="") as csvfile:
+                        fieldnames = list(data_dict.keys())
+                        values = list(data_dict.values())
+                        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+                        writer.writeheader()
+                        writer.writerow(data_dict)
+                        st.write("done")
+                        
+                    
+                
+                if st.checkbox("want df to predict value"):
+                    
                     return df
 if __name__ == "__main__":
     webpage  = Prediction_input()                

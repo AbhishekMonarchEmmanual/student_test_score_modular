@@ -3,7 +3,6 @@ import numpy as np
 from source.exception import SystemException
 from source.logger import logging
 import os, sys
-import dill
 import pandas as pd 
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
@@ -15,6 +14,7 @@ from source.config.atrifact import *
 from source.config import *
 from dataclasses import dataclass
 from sklearn.metrics import r2_score
+import dill
 
 
 def get_data_transformer_object():
@@ -61,7 +61,7 @@ def get_data_transformer_object():
     
 
 def save_object(file_path:str, obj):
-    """Use for saving object and pickle file require dill 
+    """Use for saving object and dill file require dill 
 
     Args:
         file_path (str): path you like to save your model
