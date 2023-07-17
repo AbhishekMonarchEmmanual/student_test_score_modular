@@ -1,11 +1,17 @@
-pandas
 dill
+dill
+dill
+dill
+dill
+pandas
 numpy
 seaborn
 matplotlib
 scikit-learn
 catboost
 xgboost
-Flask
-streamlit
+dill
+dill
+
+
 -e .

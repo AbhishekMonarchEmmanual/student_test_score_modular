@@ -35,13 +35,11 @@ class Prediction_input:
             st.write(data_dict)
             if st.checkbox("wanna see df"):
                 df = pd.DataFrame([data_dict])
+                st.write(df)
                 if st.checkbox("want df to predict value"):
-                    st.write(df)
                     os.makedirs("predict_df" ,exist_ok=True)
                     df.to_csv("predict_df/df.csv", index= False)
-                    
                     return df
-                
 if __name__ == "__main__":
     webpage  = Prediction_input()                
     title_input_page = webpage.my_title_page()
