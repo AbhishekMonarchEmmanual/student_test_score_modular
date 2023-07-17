@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd 
 import os
+from templates.input_webpage import *
 
                 
 if __name__ == "__main__":
