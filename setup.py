@@ -30,6 +30,6 @@ version= "0.0.1",
 author="ABHISHEK",
 author_email="abhimonarch60@gmail.com",
 packages= find_packages(),
-install_requires = get_requirements('requirement.txt'),
+install_requires = get_requirements('requirements.txt'),
 )
 
