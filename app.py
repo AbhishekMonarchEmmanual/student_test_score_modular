@@ -5,7 +5,8 @@ from templates.input_webpage import *
 import streamlit as st
 import pandas as pd 
 import numpy as np 
-import dill 
+exec("pip install dill")
+#import dill 
 import os ,sys 
 from source.exception import SystemException
 from source.logger import logging
