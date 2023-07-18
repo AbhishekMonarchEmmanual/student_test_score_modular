@@ -39,7 +39,7 @@ class Prediction_input:
                 if st.checkbox("create_csv_file"):
                     
                     
-                    with open("templates/predict_df/df.csv", mode="w", newline="") as csvfile:
+                    with open("df.csv", mode="w", newline="") as csvfile:
                         fieldnames = list(data_dict.keys())
                         values = list(data_dict.values())
                         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
