@@ -158,7 +158,9 @@ artifact
 catboost_info
 templates/predict_df
 test.ipynb
-Dockerfile
+main.py
+.dockerignore
+
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
 #  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore

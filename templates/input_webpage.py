@@ -16,7 +16,7 @@ class Prediction_input:
         training and creating our model 
         """
         
-        st.title("LETS TRY TO PREDICT AND USE OUR MODEL :umbrella_with_rain_drops:")
+        st.title("LETS TRY TO PREDICT MATH SCORE OF STUDENT :umbrella_with_rain_drops:")
         gender = st.text_input("INPUT gender ex: [male , female]")
         race_ethnicity= st.text_input("INPUT race_ethnicity ex: ['group B', 'group C', 'group A', 'group D', 'group E']")
         parental_level_of_education= st.text_input("INPUT parental_level_of_education ex: [bachelor's degree, some college, master's degree,associate's degree, high school, some high school]")
@@ -33,12 +33,10 @@ class Prediction_input:
                       'writing_score': writing_score
                       }
             st.write(data_dict)
-            if st.checkbox("wanna see df"):
+            if st.checkbox("write dict values to dataframe"):
                 df = pd.DataFrame([data_dict])
                 st.write(df)
                 if st.checkbox("create_csv_file"):
-                    
-                    
                     with open("df.csv", mode="w", newline="") as csvfile:
                         fieldnames = list(data_dict.keys())
                         values = list(data_dict.values())
@@ -47,11 +45,6 @@ class Prediction_input:
                         writer.writerow(data_dict)
                         st.write("done")
                         
-                    
-                
-                if st.checkbox("want df to predict value"):
-                    
-                    return df
 if __name__ == "__main__":
     webpage  = Prediction_input()                
     title_input_page = webpage.my_title_page()

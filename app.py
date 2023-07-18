@@ -34,20 +34,21 @@ from templates.input_webpage import *
 if __name__ == "__main__":
     webpage  = Prediction_input()                
     title_input_page = webpage.my_title_page()
-    if st.checkbox("creating model and predciting values"):
+    if st.button("Lets Train and create model"):
             train_pipe = initating_complete_training()
             model_obj, transform_obj  = train_pipe.initiate_training()
+            
             df = pd.read_csv('df.csv')
 
             pred_pipe = Prediction_pipeline(model_path=model_obj[0], transform_obj=transform_obj[0], df = df)
             
             r2_scores = pred_pipe.initate_prediction()
             df["Predicted_math_scores"] = r2_scores
-            if st.checkbox("see your predicted values"):
-                st.write(df)
             
+            st.write(df)
+        
 
-                st.text(r2_scores)
+            st.text(r2_scores)
                 
         
 
