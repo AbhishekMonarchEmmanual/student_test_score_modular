@@ -37,7 +37,7 @@ class Prediction_input:
                 df = pd.DataFrame([data_dict])
                 st.write(df)
                 if st.checkbox("create_csv_file"):
-                    os.makedirs("predict_df" ,exist_ok=True)
+                    
                     
                     with open("templates/predict_df/df.csv", mode="w", newline="") as csvfile:
                         fieldnames = list(data_dict.keys())
