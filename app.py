@@ -37,7 +37,7 @@ if __name__ == "__main__":
     if st.checkbox("creating model and predciting values"):
             train_pipe = initating_complete_training()
             model_obj, transform_obj  = train_pipe.initiate_training()
-            df = pd.read_csv('templates/predict_df/df.csv')
+            df = pd.read_csv('df.csv')
 
             pred_pipe = Prediction_pipeline(model_path=model_obj[0], transform_obj=transform_obj[0], df = df)
             
