@@ -1,2 +1,2 @@
 # student_test_score_modular
-modular coding - first try 
+The app is for predicting the reading score of the student based on other information 
